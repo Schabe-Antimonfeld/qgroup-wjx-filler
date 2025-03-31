@@ -26,6 +26,7 @@
     pip install -r requirements.txt
    ```
 ### 4. 配置config
+config.yaml
    ```yaml
     qqid: "1145141919810" # 你的QQ号
     group_id: [1145141919810] # 你要监听的群号
@@ -33,6 +34,7 @@
     token: "napcat" #一般不用修改
    ```
 ### 5. 配置问卷样式与答案
+questionnaire.yaml
    ```yaml
     q1:
       num: 1
