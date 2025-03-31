@@ -11,29 +11,29 @@
 - [x] 问卷星二维码
 - [x] 以上两者与文字的组合
 ## 使用方法
-1. 下载chromedriver
+### 1. 下载chromedriver
 
-    [下载链接](https://googlechromelabs.github.io/chrome-for-testing/)
+   [下载链接](https://googlechromelabs.github.io/chrome-for-testing/)
 
-    下载后解压，把chromedriver-win64文件夹放到项目根目录中
+   下载后解压，把chromedriver-win64文件夹放到项目根目录中
    
-2. 配置虚拟环境
-    ```shell
+### 2. 配置虚拟环境
+   ```shell
     conda create -n qwf_venv python=3.13
-    ```
-3. 安装依赖
-    ```shell
+   ```
+### 3. 安装依赖
+   ```shell
     pip install -r requirements.txt
-    ```
-4. 配置config
-    ```yaml
+   ```
+### 4. 配置config
+   ```yaml
     qqid: "1145141919810" # 你的QQ号
     group_id: [1145141919810] # 你要监听的群号
     ws_uri: ws://localhost:3001 #一般不用修改
     token: "napcat" #一般不用修改
-    ```
-5. 配置问卷样式与答案
-    ```yaml
+   ```
+### 5. 配置问卷样式与答案
+   ```yaml
     q1:
       num: 1
       type: monoBlank #monoBlank, monoChoice
@@ -65,10 +65,10 @@
       ans: [1]
       random: None
    ```
-6. 运行
-    ```shell
+### 6. 运行
+   ```shell
     python main.py
-    ```
-    第一次运行时会要求安装NapCat，按照提示安装即可
+   ```
+   第一次运行时会要求安装NapCat，按照提示安装即可
     
-    之后会要求扫码登录qq，扫码后即可运行
+   之后会要求扫码登录qq，扫码后即可运行
