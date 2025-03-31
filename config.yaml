@@ -1,7 +1,7 @@
 q1:
   num: 1
   type: monoBlank #monoBlank, monoChoice
-  ans: [厉宸昊]
+  ans: [xn]
   random: None  #None, randint, uniform
 q2:
   num: 2
@@ -11,17 +11,17 @@ q2:
 q3:
   num: 3
   type: monoBlank
-  ans: [大工书院]
+  ans: [下北泽书院]
   random: None
 q4:
   num: 4
   type: monoBlank
-  ans: [20241034038]
+  ans: [1145141919810]
   random: None
 q5:
   num: 5
   type: monoBlank
-  ans: [18913223947]
+  ans: [1898989889]
   random: None
 q6:
   num: 6
