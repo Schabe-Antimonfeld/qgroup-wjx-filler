@@ -1,15 +1,14 @@
 import re
-import yaml
 from io import BytesIO
 
 import requests
+import yaml
 from PIL import Image
 from ncatbot.core import BotClient, GroupMessage
 from ncatbot.utils.config import config
 
 from utils.findlink import decodeQR
 from utils.wjxfiller import fillWJX
-
 
 cfg = dict(yaml.load(open('config.yaml', 'r', encoding="utf-8"), Loader=yaml.FullLoader).items())
 config.set_bot_uin(cfg["qqid"])
