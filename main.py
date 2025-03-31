@@ -1,4 +1,5 @@
 import re
+import yaml
 from io import BytesIO
 
 import requests
@@ -10,11 +11,13 @@ from utils.findlink import decodeQR
 from utils.wjxfiller import fillWJX
 
 
-config.set_bot_uin("2788278428")
-config.set_ws_uri("ws://localhost:3001")
-config.set_token("napcat")
+cfg = yaml.load(open('config.yaml', 'r', encoding="utf-8"), Loader=yaml.FullLoader).items()
+
+config.set_bot_uin(cfg["qqid"])
+config.set_ws_uri(cfg["ws_uri"])
+config.set_token(cfg["token"])
 bot = BotClient()
-groups = {"1033143754"}
+groups = {cfg["group_id"]}
 
 
 @bot.group_event()

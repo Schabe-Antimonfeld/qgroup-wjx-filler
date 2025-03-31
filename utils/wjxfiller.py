@@ -23,7 +23,7 @@ def fillWJX(url: str) -> None:
     driver.set_window_size(600, 500)
     driver.set_window_position(x=400, y=50)
     driver.get(url)
-    cfg = list(yaml.load(open('config.yaml', 'r', encoding="utf-8"), Loader=yaml.FullLoader).items())
+    cfg = list(yaml.load(open('questionnaire.yaml', 'r', encoding="utf-8"), Loader=yaml.FullLoader).items())
     for q in cfg:
         if q[1]["type"] == "monoBlank":
             qt.monoBlank(driver, q)
