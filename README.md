@@ -72,3 +72,9 @@
    第一次运行时会要求安装NapCat，按照提示安装即可
     
    之后会要求扫码登录qq，扫码后即可运行
+
+## 测试
+
+https://www.wjx.cn/vm/rXis19K.aspx
+
+![wjxpr](wjxqr.png)
