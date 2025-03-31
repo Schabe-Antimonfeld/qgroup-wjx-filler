@@ -79,4 +79,4 @@ python main.py
 
 https://www.wjx.cn/vm/rXQdKvE.aspx
 
-![wjxpr](wjxqr.png)
+![wjxqr](wjxqr.png)
