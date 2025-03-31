@@ -23,7 +23,6 @@ groups = cfg["group_id"]
 async def on_group_message(msg: GroupMessage):
     pattern = r"https://www.wjx.cn/[a-zA-Z0-9/_\-]+.aspx"
     for id in groups:
-        print(msg.group_id)
         if msg.group_id == id:
             if url := re.search(pattern, msg.raw_message):
                 fillWJX(url.group())
