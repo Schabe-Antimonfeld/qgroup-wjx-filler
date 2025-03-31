@@ -77,6 +77,6 @@ python main.py
 
 ## 测试
 
-https://www.wjx.cn/vm/rXis19K.aspx
+https://www.wjx.cn/vm/rXQdKvE.aspx
 
 ![wjxpr](wjxqr.png)
