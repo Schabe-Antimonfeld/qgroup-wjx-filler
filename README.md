@@ -13,67 +13,67 @@
 ## 使用方法
 ### 1. 下载chromedriver
 
-   [下载链接](https://googlechromelabs.github.io/chrome-for-testing/)
+[下载链接](https://googlechromelabs.github.io/chrome-for-testing/)
 
-   下载后解压，把chromedriver-win64文件夹放到项目根目录中
+下载后解压，把chromedriver-win64文件夹放到项目根目录中
    
 ### 2. 配置虚拟环境
-   ```shell
-    conda create -n qwf_venv python=3.13
-   ```
+```shell
+conda create -n qwf_venv python=3.13
+```
 ### 3. 安装依赖
-   ```shell
-    pip install -r requirements.txt
-   ```
+```shell
+pip install -r requirements.txt
+```
 ### 4. 配置config
 config.yaml
-   ```yaml
-    qqid: "1145141919810" # 你的QQ号
-    group_id: [1145141919810] # 你要监听的群号
-    ws_uri: ws://localhost:3001 #一般不用修改
-    token: "napcat" #一般不用修改
-   ```
+```yaml
+qqid: "1145141919810" # 你的QQ号
+group_id: [1145141919810] # 你要监听的群号
+ws_uri: ws://localhost:3001 #一般不用修改
+token: "napcat" #一般不用修改
+ ```
 ### 5. 配置问卷样式与答案
 questionnaire.yaml
-   ```yaml
-    q1:
-      num: 1
-      type: monoBlank #monoBlank, monoChoice
-      ans: [细男] #可以有多个答案，开启随机只会随机选择一个填，否则选第一个
-      random: None  #None, randint, uniform(虽然还没有实现)
-    q2:
-      num: 2
-      type: monoChoice
-      ans: [1]  #1：A，2：B，3：C，4：D以此类推，可以有多个答案，开启随机只会随机选择一个填，否则选第一个
-      random: None
-    q3:
-      num: 3
-      type: monoBlank
-      ans: [下北泽书院]
-      random: None
-    q4:
-      num: 4
-      type: monoBlank
-      ans: [1145141919810]
-      random: None
-    q5:
-      num: 5
-      type: monoBlank
-      ans: [1898989889]
-      random: None
-    q6:
-      num: 6
-      type: monoChoice
-      ans: [1]
-      random: None
-   ```
+```yaml
+q1:
+  num: 1
+  type: monoBlank #monoBlank, monoChoice
+  ans: [细男] #可以有多个答案，开启随机只会随机选择一个填，否则选第一个
+  random: None  #None, randint, uniform(虽然还没有实现)
+q2:
+  num: 2
+  type: monoChoice
+  ans: [1]  #1：A，2：B，3：C，4：D以此类推，可以有多个答案，开启随机只会随机选择一个填，否则选第一个
+  random: None
+q3:
+  num: 3
+  type: monoBlank
+  ans: [下北泽书院]
+  random: None
+q4:
+  num: 4
+  type: monoBlank
+  ans: [1145141919810]
+  random: None
+q5:
+  num: 5
+  type: monoBlank
+  ans: [1898989889]
+  random: None
+q6:
+  num: 6
+  type: monoChoice
+  ans: [1]
+  random: None
+```
 ### 6. 运行
-   ```shell
-    python main.py
-   ```
-   第一次运行时会要求安装NapCat，按照提示安装即可
+```shell
+python main.py
+```
+第一次运行时会要求安装NapCat，按照提示安装即可
     
-   之后会要求扫码登录qq，扫码后即可运行
+之后会要求扫码登录qq，扫码后即可运行
 
 ## 测试
 
