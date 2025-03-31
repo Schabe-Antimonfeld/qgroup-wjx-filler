@@ -1,0 +1,30 @@
+q1:
+  num: 1
+  type: monoBlank #monoBlank, monoChoice
+  ans: [厉宸昊]
+  random: None  #None, randint, uniform
+q2:
+  num: 2
+  type: monoChoice
+  ans: [1]
+  random: None
+q3:
+  num: 3
+  type: monoBlank
+  ans: [大工书院]
+  random: None
+q4:
+  num: 4
+  type: monoBlank
+  ans: [20241034038]
+  random: None
+q5:
+  num: 5
+  type: monoBlank
+  ans: [18913223947]
+  random: None
+q6:
+  num: 6
+  type: monoChoice
+  ans: [1]
+  random: None
