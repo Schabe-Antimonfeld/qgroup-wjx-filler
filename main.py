@@ -23,14 +23,14 @@ async def on_group_message(msg: GroupMessage):
     if msg.group_id in groups:
         if url := re.search(pattern, msg.raw_message):
             fillWJX(url.group())
-    for segment in msg.message:
-        if segment["type"] == "image":
-            imgurl = segment["data"]["url"]
-            response = requests.get(imgurl)
-            image_data = BytesIO(response.content)
-            img = Image.open(image_data)
-            if url := decodeQR(img):
-                fillWJX(url)
+        for segment in msg.message:
+            if segment["type"] == "image":
+                imgurl = segment["data"]["url"]
+                response = requests.get(imgurl)
+                image_data = BytesIO(response.content)
+                img = Image.open(image_data)
+                if url := decodeQR(img):
+                    fillWJX(url)
 
 
 if __name__ == "__main__":
