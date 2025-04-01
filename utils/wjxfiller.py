@@ -1,3 +1,5 @@
+import time
+
 import yaml
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -25,6 +27,7 @@ def fillWJX(url: str) -> None:
     driver.get(url)
     cfg = list(yaml.load(open('questionnaire.yaml', 'r', encoding="utf-8"), Loader=yaml.FullLoader).items())
     for q in cfg:
+        time.sleep(1.3)
         if q[1]["type"] == "monoBlank":
             qt.monoBlank(driver, q)
         elif q[1]["type"] == "monoChoice":
