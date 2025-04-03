@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 import utils.questiontype as qt
+from utils.questionconfirm import get_questions
 
 
 def fillWJX(url: str) -> None:
@@ -26,10 +27,23 @@ def fillWJX(url: str) -> None:
     driver.set_window_position(x=400, y=50)
     driver.get(url)
     cfg = list(yaml.load(open('questionnaire.yaml', 'r', encoding="utf-8"), Loader=yaml.FullLoader).items())
+    questions = get_questions(driver, len(cfg))
     for q in cfg:
         time.sleep(1.3)
-        if q[1]["type"] == "monoBlank":
-            qt.monoBlank(driver, q)
-        elif q[1]["type"] == "monoChoice":
-            qt.monoChoice(driver, q)
+        options = q[1]
+        if options["type"] == "monoBlank":
+            qt.monoBlank(driver, options["num"], options["ans"], options["random"])
+        elif options["type"] == "monoChoice":
+            qt.monoChoice(driver, options["num"], options["ans"], options["random"])
+        elif options["type"] == "optional":
+            if questions[q[1]["num"] - 1][0] == "monoBlank":
+                qt.monoBlank(driver, options["num"], options["ans"], options["random"])
+            elif questions[q[1]["num"] - 1][0] == "monoChoice":
+                ans = []
+                for choice in options["ans"]:
+                    ans.append(questions[q[1]["num"] - 1][2].index(choice) + 1)
+                try:
+                    qt.monoChoice(driver, options["num"], ans, options["random"])
+                except:
+                    qt.monoChoice(driver, options["num"], [1], options["random"])
     driver.find_element(By.XPATH, '//*[@id="ctlNext"]').click()

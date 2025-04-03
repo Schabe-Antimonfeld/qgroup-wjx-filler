@@ -1,6 +1,6 @@
 q1:
   num: 1
-  type: monoBlank #monoBlank, monoChoice
+  type: monoBlank #monoBlank, monoChoice, optional
   ans: [细男]
   random: None  #None, randint, uniform
 q2:
@@ -25,6 +25,6 @@ q5:
   random: None
 q6:
   num: 6
-  type: monoChoice
-  ans: [1]
+  type: optional
+  ans: [我是雪豹]
   random: None

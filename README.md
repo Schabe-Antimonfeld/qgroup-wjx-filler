@@ -63,8 +63,8 @@ q5:
   random: None
 q6:
   num: 6
-  type: monoChoice
-  ans: [1]
+  type: optional  #不确定题型
+  ans: [我是雪豹] #填空直接填，选择会自动选，若没有这项自动选A
   random: None
 ```
 ### 6. 运行
